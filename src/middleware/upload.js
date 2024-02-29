@@ -1,6 +1,5 @@
 import multer from "multer";
 import slugify from "../handle/slug";
-import imagesize from 'image-size'
 
 let prefix = Date.now();
 

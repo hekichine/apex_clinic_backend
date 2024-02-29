@@ -11,7 +11,9 @@ const app = express();
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.send("Hello word");
+  res.status(200).json({
+    url: `${process.env.ROUTER_VERSION}`
+  });
 });
 
 app.use(express.static("public"));

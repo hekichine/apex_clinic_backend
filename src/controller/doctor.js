@@ -27,11 +27,9 @@ const doctorController = {
       slug: slugify(req.body.name),
       image: handleImage(req)
     }
-    console.log(doctor);
-    return;
     let new_doctor = await doctorService.create(doctor);
 
-    if (new_doctor !== null) {
+    if (new_doctor) {
       return res.status(200).json({
         message: "Create doctor success",
       });
